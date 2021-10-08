@@ -1,0 +1,93 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #f8f9fa;
+}
+
+nav {
+    background-color: #f8f9fa;
+}
+
+div #layout {
+    background-color: #f8f9fa;
+}
+
+.drag {
+    -webkit-app-region: drag;
+}
+
+.no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.applicant-info-form {
+    max-width: "320px";
+}
+
+.card-header {
+    background: var(--bs-primary);
+}
+
+.no-shadow, .no-shadow:hover, .no-shadow:focus, .no-shadow:active, .no-shadow:visited {
+    box-shadow: none;
+    transition: 0.25s ease-in-out;
+}
+
+.no-border {
+    border: none;
+    transition: 0.25s ease-in-out;
+}
+
+.no-border:hover {
+    transform: scale(1.03);
+    transition: 0.25s ease-in-out;
+}
+
+#menu {
+    width: 100vw;
+    height: 3rem;
+    background-color:beige;
+}
+
+#layout {
+    height: 100vh;
+}
+
+#icon-home {
+    background-image: url(./images/house-fill.svg);
+}
+
+#icon-settings {
+    background-image: url(./images/gear.svg);
+}
+
+#minimize-button {
+    text-align: center;
+    transition: all 0.2s ease ;
+    height: 3rem;
+    width: 3rem;
+    background: url(./images/dash-lg.svg) no-repeat 50% 50%;
+}
+
+#exit-button {
+    text-align: center;
+    transition: all 0.2s ease ;
+    height: 3rem;
+    width: 3rem;
+    background: url(./images/close-lg.svg) no-repeat 50% 50%;
+}
+
+.hover-lighter {
+    transition: all 0.2s ease;
+}
+
+.hover-lighter:hover {
+    background-color: var(--bs-primary);
+}
+
+.hover-lighter:hover #exit-button {
+    background-color: var(--bs-danger);
+}
