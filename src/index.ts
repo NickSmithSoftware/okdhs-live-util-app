@@ -59,11 +59,12 @@ const createWindow = () => {
 
 let i = 0, lastQuery: string|undefined;
 async function searchPantryCollection(query?: string) : Promise<Pantry[]> {
-  if(query != lastQuery) {
+  const isUndefined = query == undefined;
+  
+  if(!isUndefined && query != lastQuery) {
     i = 0;
     lastQuery = query;
   }
-  const isUndefined = query == undefined;
 
   // const city = isUndefined ? undefined : query.replace(/[^a-zA-Z]+/g, '');
   // console.log(city);

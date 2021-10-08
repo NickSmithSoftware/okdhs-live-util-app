@@ -26,6 +26,12 @@ export const FindPantry: React.FC = () => {
         updatePantryCount(getPantryCount());
     }, [getPantryCount])
 
+    const spc = (address: string|undefined) => {
+        searchPantryCollection(address == undefined || address == '' ? undefined : address).then((e) => {
+            setResults(e);
+            setIndex(index+1);
+        })
+    }
     return (
         <Layout>
             <Link to="/resources"> Go Back </Link>
@@ -41,6 +47,7 @@ export const FindPantry: React.FC = () => {
             <form className="d-flex flex-row px-2">
                 <input type="text" className="form-control w-50 mx-2" value={address} onChange={(e) => {
                     setAddress(e.target.value)
+                    spc("\"" + address + "\"");
                 }} />
                 <button type="button" className="btn btn-success mx-2 no-shadow" onClick={() => searchPantryCollection(address == undefined || address == '' ? undefined : address).then((e) => {
                     setResults(e);
