@@ -147,3 +147,5 @@ ipcMain.handle("get-pantry-count", () => {
 ipcMain.handle("geocode-address", (event: Electron.IpcMainEvent, address:string) => {
   return geocodeAddress(address);
 })
+
+ipcMain.handle("")
