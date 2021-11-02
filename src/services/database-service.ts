@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 export const collections: { pantries?: mongoDB.Collection } = {};
 
 let client: mongoDB.MongoClient | undefined;
-const DB_CONN_STRING="mongodb+srv://Admin:nicem2me@okdhslive.qctg1.mongodb.net/test?authSource=admin&replicaSet=atlas-dmm2v7-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+const DB_CONN_STRING="mongodb+srv://User:nicksmithsoftware@okdhslive.qctg1.mongodb.net/okdhslive-database?retryWrites=true&w=majority"
 const DB_NAME="resources"
 const PANTRIES_COLLECTION_NAME="pantries"
 

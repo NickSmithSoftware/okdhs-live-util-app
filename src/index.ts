@@ -133,7 +133,7 @@ ipcMain.handle("get-current-date", () => {
 })
 
 ipcMain.handle("search-pantry-collection", (event, query?: string|undefined) => {
-  return searchPantryCollection(query);
+  return query ? searchPantryCollection(query) : searchPantryCollection();
 })
 
 ipcMain.handle("set-pantry-count", () => {
